@@ -11,9 +11,4 @@ router.get('/dashboard', function(req, res, next) {
   res.render('pages/dashboard', { title: 'Roadtripper' });
 });
 
-/*  GET trip page  */
-router.get('/trip', function(req, res, next) {
-  res.render('pages/trip', { title: 'Roadtripper' });
-});
-
 module.exports = router;
