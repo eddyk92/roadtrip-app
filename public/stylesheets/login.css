@@ -1,0 +1,36 @@
+body {
+	padding-top: 10%;
+	background-image: url(../img/openroad.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	height: 75%;
+	padding-right: 5%;
+}
+
+h1 {
+	text-align: center;
+	padding-left: 8%;
+}
+
+.form {  
+	position: relative;
+    /*width: 200px;*/
+    margin-left: 550px;
+    height: 260px;
+    padding-top: 30px;
+    background-color:white;
+    opacity: 0.93; 
+    margin: auto;  
+    border-radius: 10%;  
+}
+
+.row {
+	padding-left: 28%;
+	display: inline-block;
+	float-left: 100px;
+	margin: 5px 0;
+}
+
+
+
+

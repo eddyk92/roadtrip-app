@@ -1,0 +1,51 @@
+body {
+	background-image: url(../img/road.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+p {
+	padding-top: 15%;
+	text-align: center;
+
+}
+
+.container {
+}
+
+.row {
+	padding-left: 4%;
+	padding-right: 4%;
+}
+
+.picBox1{
+	width: 300px;
+	height: 250px;
+	margin: 0px;
+    display: inline-block;
+    content: url(../img/hand.jpg);
+}
+.picBox2{
+	width: 30px;
+	height: 250px;
+	margin: 0px;
+    display: inline-block;
+    content: url(../img/drving.jpg);
+}
+.picBox3{
+	width: 350px;
+	height: 250px;
+	margin: 0px;
+    display: inline-block;
+    content: url(../img/ppl.jpg);
+}
+/*.picBox2{
+    position: relative;
+  
+    background: url(../img/drving.jpg) no-repeat center center scroll;
+}
+
+.picBox3{
+    position: relative;
+ 
+    background: url(../img/ppl.jpg) no-repeat center center scroll;
+}*/
