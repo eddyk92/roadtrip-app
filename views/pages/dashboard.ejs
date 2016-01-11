@@ -50,21 +50,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script>
-      var startCity, endCity;
-
-      function initAutocomplete() {
-        // Create the autocomplete object, restricting the search to geographical
-        // location types.
-        startCity = new google.maps.places.Autocomplete(document.getElementById('start-city'));
-        endCity = new google.maps.places.Autocomplete(document.getElementById('end-city'));
-      }
-
-      $('#tripForm').submit(function() {
-        $('#start-city').val(startCity.getPlace().id);
-        $('#end-city').val(endCity.getPlace().id);
-      });
-    </script>
+    <script src="javascripts/dashboard.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=<%= browser_key %>&signed_in=true&libraries=places&callback=initAutocomplete"
         async defer></script>
 

@@ -15,7 +15,6 @@ router.get('/:id', function(req, res, next) {
 */
 
 router.post('/new', function(req, res, next) {
-  console.log(req.body);
   res.redirect('/trip/1');
 });
 
