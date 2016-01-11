@@ -8,13 +8,19 @@ router.get('/login', function(req, res, next) {
   });
 });
 
-router.post('/login')
+router.post('/login', function(req, res, next) {
+
+});
 
 /* GET sign up page. */
 router.get('/signup', function(req, res, next) {
   res.render('pages/signup', {
     title: "Sign Up"
   });
+});
+
+router.post('/signup', function(req, res, next) {
+
 });
 
 
