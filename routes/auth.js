@@ -9,7 +9,7 @@ router.get('/login', function(req, res, next) {
 });
 
 router.post('/login', function(req, res, next) {
-
+  //  Store userID in cookie
 });
 
 /* GET sign up page. */
@@ -20,7 +20,7 @@ router.get('/signup', function(req, res, next) {
 });
 
 router.post('/signup', function(req, res, next) {
-
+  //  Store userID in cookie
 });
 
 

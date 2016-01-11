@@ -3,7 +3,7 @@
   <head>
     <% include ../partials/head %>
   </head>
-  <body>
+  <body onload="initialize()">
     <header>
       <% include ../partials/header %>
     </header>
@@ -44,9 +44,14 @@
 
 
       <!-- GOOGLE MAP -->
-      <div class="col-md-6">Google map</div>
+      <div id="map_canvas" style="width:600px; height:600px" class="col-md-6"></div>
     </div>
 
     <% include ../partials/footer %>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<%= browser_key %>"async defer></script>
+    <script src="/javascripts/displayMap.js"></script>
   </body>
 </html>
