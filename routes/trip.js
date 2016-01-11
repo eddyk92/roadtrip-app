@@ -18,6 +18,14 @@ router.get('/:id', function(req, res, next) {
 */
 
 router.post('/new', function(req, res, next) {
+  /*
+    req.body = {
+      startCityName: "",
+      startCityID: "",
+      endCityName: "",
+      endCityName: ""
+    }
+  */
   res.redirect('/trip/' + id);
 });
 
