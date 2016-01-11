@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+require('dotenv').load();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -8,7 +9,10 @@ router.get('/', function(req, res, next) {
 
 /*  GET dashboard  */
 router.get('/dashboard', function(req, res, next) {
-  res.render('pages/dashboard', { title: 'Dashboard' });
+  res.render('pages/dashboard', {
+    title: 'Dashboard',
+    browser_key: process.env.BROWSER_KEY
+  });
 });
 
 module.exports = router;

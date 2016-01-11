@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+require('locus')
 
 /*  GET trip page
     id of trip, get from table, then render page
@@ -14,7 +15,8 @@ router.get('/:id', function(req, res, next) {
 */
 
 router.post('/new', function(req, res, next) {
-  res.redirect('/trip/:id');
+  console.log(req.body);
+  res.redirect('/trip/1');
 });
 
 module.exports = router;
