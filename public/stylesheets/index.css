@@ -18,19 +18,21 @@ p {
 }
 
 .picBox1{
-	width: 300px;
+	width: 350px;
 	height: 250px;
 	margin: 0px;
     display: inline-block;
     content: url(../img/hand.jpg);
 }
+
 .picBox2{
-	width: 30px;
+	width: 350px;
 	height: 250px;
 	margin: 0px;
     display: inline-block;
-    content: url(../img/drving.jpg);
+    content: url(../img/driving.jpg);
 }
+
 .picBox3{
 	width: 350px;
 	height: 250px;
@@ -40,12 +42,11 @@ p {
 }
 /*.picBox2{
     position: relative;
-  
+
     background: url(../img/drving.jpg) no-repeat center center scroll;
 }
 
 .picBox3{
     position: relative;
- 
     background: url(../img/ppl.jpg) no-repeat center center scroll;
 }*/

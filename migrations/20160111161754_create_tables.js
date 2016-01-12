@@ -1,11 +1,23 @@
 exports.up = function(knex, Promise) {
-
   return Promise.all([
+    knex.schema.createTable('users', function(table) {
+        table.increments(); // id serial primary key
+        table.string('email');
+        table.string('password');
+    }),
+
     knex.schema.createTable('cities', function(table) {
       table.increments(); // id serial primary key
-      table.integer('trip_id').references('id').inTable('trips');
-      table.string('place_id');
+      table.string('place_id'); //  unique id from google
       table.string('name');
+    }),
+
+    //  this holds cities that belong to a trip, but are not the start
+    //  or the end city
+    knex.schema.createTable('waypoints', function(table) {
+      table.increments();
+      table.integer('trip_id').references('id').inTable('trips');
+      table.integer('city_id').references('id').inTable('cities');
     }),
 
     knex.schema.createTable('trips', function(table) {
@@ -30,5 +42,9 @@ exports.up = function(knex, Promise) {
 };
 
 exports.down = function(knex, Promise) {
-  return knex.schema.dropTable('trips');
+  return knex.schema.dropTable('users')
+    .dropTable('cities')
+    .dropTable('trips')
+    .dropTable('waypoints')
+    .dropTable('activities');
 };

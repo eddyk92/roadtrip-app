@@ -2,6 +2,9 @@
 <html>
   <head>
     <% include ../partials/head %>
+    <style>
+      .pac-container { z-index: 2000 !important; }
+    </style>
   </head>
   <body>
     <header>
@@ -31,18 +34,18 @@
             <h4 class="modal-title" id="myModalLabel">New Trip</h4>
           </div>
           <div class="modal-body">
-            <form role="form" action="/trip/new" method="POST">
+            <form role="form" action="/trip/new" method="POST" id="tripForm">
               <div class="form-group">
                 <label for="name">Name of trip:</label>
-                <input type="text" class="form-control" id="name"required/>
+                <input type="text" class="form-control" id="name" name="name" required/>
               </div>
               <div class="form-group">
                 <label for="start-city">Start city:</label>
-                <input type="text" class="form-control" id="start-city" required/>
+                <input type="text" class="form-control" id="start-city" name="start-city" required/>
               </div>
               <div class="form-group">
                 <label for="end-city">End city:</label>
-                <input type="text" class="form-control" id="end-city" required/>
+                <input type="text" class="form-control" id="end-city" name="end-city" required/>
               </div>
               <button type="submit" class="btn btn-primary">Create trip</button>
             </form>
@@ -60,5 +63,8 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="javascripts/dashboard.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<%= browser_key %>&signed_in=true&libraries=places&callback=initAutocomplete"
+        async defer></script>
   </body>
 </html>

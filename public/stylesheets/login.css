@@ -11,16 +11,15 @@ h1 {
 	padding-left: 8%;
 }
 
-.form {  
+
+.form {
 	position: relative;
-    /*width: 200px;*/
-    margin-left: 550px;
-    height: 230px;
-    padding-top: 30px;
-    background-color:white;
-    opacity: 0.93; 
-    margin: auto;  
-    border-radius: 10%;  
+  margin-left: 550px;
+  padding: 3%;
+  background-color:white;
+  opacity: 0.93;
+  margin: auto;
+  border-radius: 10%;
 }
 
 .row {

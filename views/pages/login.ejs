@@ -6,25 +6,24 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
     <% include ../partials/head %>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/login.css">
   </head>
   <body class="login">
     <header>
       <% include ../partials/header %>
     </header>
 
-     <script>
+    <script>
       function statusChangeCallback(response) {
-      console.log('statusChangeCallback');
-      console.log(response);
+        console.log('statusChangeCallback');
+        console.log(response);
 
         if (response.status === 'connected') {
-           testAPI();
+             testAPI();
         } else if (response.status === 'not_authorized') {
-           document.getElementById('status').innerHTML = 'Please log ' +
-            'into this app.';
+          document.getElementById('status').innerHTML = 'Please log ' + 'into this app.';
         } else {
-          document.getElementById('status').innerHTML = 'Please log ' +
-            'into Facebook.';
+          document.getElementById('status').innerHTML = 'Please log ' + 'into Facebook.';
         }
       }
 
@@ -34,7 +33,7 @@
         });
       }
 
-        window.fbAsyncInit = function() {
+      window.fbAsyncInit = function() {
         FB.init({
           appId      : '1730590710505089',
           cookie     : true,
@@ -45,8 +44,7 @@
         FB.getLoginStatus(function(response) {
           statusChangeCallback(response);
         });
-
-        };
+      };
 
       (function(d, s, id){
          var js, fjs = d.getElementsByTagName(s)[0];
