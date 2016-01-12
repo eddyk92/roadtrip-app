@@ -9,7 +9,8 @@ router.get('/', function(req, res, next) {
 /*  GET dashboard  */
 router.get('/dashboard', isLoggedIn, function(req, res, next) {
 
-  //  user info is store in req.body.user
+  //  user id is stored in req.session.passport.user
+  //  id, email, and hashed password stored in req.user
 
   res.render('pages/dashboard', {
     title: 'Dashboard',

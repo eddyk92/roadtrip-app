@@ -10,6 +10,7 @@
         <ul class="nav navbar-nav">
             <li><a href="/">Home</a></li>
             <% if (loggedIn) {%>
+              <li><a href="/dashboard">My Trips</a></li>
               <li><a href="/auth/logout">Logout</a></li>
             <% } else { %>
               <li><a href="/auth/signup">Sign Up</a></li>

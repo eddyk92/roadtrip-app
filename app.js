@@ -81,7 +81,7 @@ passport.use('signup', new LocalStrategy({
       knex('users').where('email', email).first().then(function(user) {
         // user already exists
         if (user) {
-          return done(null, false, req.flash('message','User Already Exists. Please login.'));
+          return done(null, false, req.flash('message','Email Already Exists. Please login.'));
         } else if (req.body.password !== req.body['confirm-password']) {
           return done(null, false, req.flash('message', 'Passwords do not match'));
         }else{
@@ -91,8 +91,8 @@ passport.use('signup', new LocalStrategy({
           knex('users').insert({
             email: email,
             password: hash
-          }, 'id').then(function(id) {
-            return done(null, id[0]);
+          }, 'id').first().then(function(id) {
+            return done(null, id);
           });
         }
       });
