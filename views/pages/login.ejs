@@ -66,16 +66,19 @@
     <h1>Welcome Back!</h1>
     <div class="col-md-offset-1 col-md-4"></div>
     <div class="col-md-3 form">
-      <form>
+      <% if (message.length > 0) { %>
+        <div class="alert alert-danger"><%= message %></div>
+      <% } %>
+      <form action="/auth/login" method="POST">
         <fieldset>
           <div class="row">
-            <input id="textinput" name="textinput" type="text" placeholder="Email" class="form-control input-md">
+            <input id="email" name="email" type="email" placeholder="Email" class="form-control input-md">
           </div>
           <div class="row">
-              <input id="textinput" name="textinput" type="text" placeholder="Password" class="form-control input-md">
+              <input id="password" name="password" type="password" placeholder="Password" class="form-control input-md">
           </div>
           <div class="row">
-            <button type="button" class="btn btn-success btn-block"> Login </button>
+            <input class="btn btn-success btn-block" type="submit" value="Login">
             <div class="fb-login-button" data-max-rows="3" data-size="medium" data-show-faces="false" data-auto-logout-link="false"></div>
           </div>
         </fieldset>
