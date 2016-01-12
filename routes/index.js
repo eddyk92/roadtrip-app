@@ -7,7 +7,10 @@ router.get('/', function(req, res, next) {
 });
 
 /*  GET dashboard  */
-router.get('/dashboard', function(req, res, next) {
+router.get('/dashboard', isLoggedIn, function(req, res, next) {
+
+  //  user info is store in req.body.user
+
   res.render('pages/dashboard', {
     title: 'Dashboard',
     browser_key: process.env.BROWSER_KEY
@@ -17,13 +20,12 @@ router.get('/dashboard', function(req, res, next) {
 module.exports = router;
 
 
-/*  Middleware to check if user is logged in
+/*  Middleware to check if user is logged in  */
 function isLoggedIn(req, res, next) {
-    // if user is authenticated in the session, carry on
-    if (req.isAuthenticated())
-        return next();
+  // if user is authenticated in the session, carry on
+  if (req.isAuthenticated())
+    return next();
 
-    // if they aren't redirect them to the home page
-    res.redirect('/');
+  // if they aren't redirect them to the home page
+  res.redirect('/auth/signup');
 }
-*/
