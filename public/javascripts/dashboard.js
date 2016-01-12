@@ -1,12 +1,13 @@
 var startCity, endCity;
 
 function initAutocomplete() {
-  // Create the autocomplete object, restricting the search to geographical
-  // location types.
+  // Create the autocomplete object
   startCity = new google.maps.places.Autocomplete(document.getElementById('start-city'));
   endCity = new google.maps.places.Autocomplete(document.getElementById('end-city'));
 }
 
+//  Make AJAX request to send id and name of
+//  start and end city which are stored in database
 $('#tripForm').submit(function(e) {
   e.preventDefault();
 
@@ -16,7 +17,6 @@ $('#tripForm').submit(function(e) {
   data.endCityName = $('#end-city').val();
   data.endCityID = endCity.getPlace().id;
 
-  //  AJAX request to send id and name of both start and end city
   $.ajax({
     type: 'POST',
     url: '/trip/new',
