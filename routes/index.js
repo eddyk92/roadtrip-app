@@ -8,6 +8,9 @@ router.get('/', function(req, res, next) {
 
 /*  GET dashboard  */
 router.get('/dashboard', isLoggedIn, function(req, res, next) {
+
+  //  user info is store in req.body.user
+
   res.render('pages/dashboard', {
     title: 'Dashboard',
     browser_key: process.env.BROWSER_KEY

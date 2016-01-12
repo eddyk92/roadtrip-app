@@ -49,7 +49,7 @@ passport.serializeUser(function(user, done) {
 
 passport.deserializeUser(function(id, done) {
   knex('users').where('id', id).first().then(function(user) {
-    done(err, user);
+    done(null, user);
   });
 });
 
@@ -103,6 +103,14 @@ passport.use('signup', new LocalStrategy({
     process.nextTick(findOrCreateUser);
   }
 ));
+
+//  set a local variable to indicate if a
+//  user is logged in
+app.use(function (req, res, next) {
+  res.locals.loggedIn = req.isAuthenticated();
+  next();
+});
+
 
 app.use('/', routes);
 app.use('/auth', auth);
