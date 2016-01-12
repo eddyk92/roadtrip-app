@@ -15,7 +15,7 @@ h1 {
 	position: relative;
     /*width: 200px;*/
     margin-left: 550px;
-    height: 260px;
+    height: 230px;
     padding-top: 30px;
     background-color:white;
     opacity: 0.93; 
@@ -24,7 +24,7 @@ h1 {
 }
 
 .row {
-	padding-left: 28%;
+	padding-left: 22%;
 	display: inline-block;
 	float-left: 100px;
 	margin: 5px 0;
