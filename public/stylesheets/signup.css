@@ -1,0 +1,36 @@
+.signup {
+	background-image: url(../img/roadtrip2.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	height: 75%;
+	padding-right: 5%;
+}
+
+h1 {
+	text-align: center;
+	padding-left: 8%;
+}
+
+h4 {
+	text-align: center;
+	padding-left: 8%;
+}
+
+.form {  
+	position: relative;
+    /*width: 200px;*/
+    margin-left: 550px;
+    height: 240px;
+    padding-top: 30px;
+    background-color:white;
+    opacity: .93; 
+    margin: auto;  
+    border-radius: 10%;  
+}
+
+.row {
+	padding-left: 22%;
+	display: inline-block;
+	float-left: 100px;
+	margin: 5px 0;
+}
