@@ -1,7 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-image: url(../img/windshield.jpg);
+  background-image: url(../img/bikes.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
   height: 75%;
@@ -10,5 +10,3 @@ body {
 a {
   color: #00B7FF;
 }
-
-
